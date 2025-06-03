@@ -156,6 +156,6 @@ def client_main(server_ip, server_port):
 
 if __name__ == '__main__':
     # Change IP and port to match your server
-    SERVER_IP = '127.0.0.1'
+    SERVER_IP = '192.168.40.251'
     SERVER_PORT = 4444
     client_main(SERVER_IP, SERVER_PORT)
