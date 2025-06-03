@@ -1,0 +1,21 @@
+@echo off
+REM --- Set URL of file to download ---
+set URL=https://example.com/somefile.exe
+
+REM --- Set local path to save file ---
+set FILE=%Documents%\client.py
+
+REM --- Download the file using PowerShell ---
+powershell -Command "Invoke-WebRequest -Uri '%URL%' -OutFile '%FILE%'"
+
+REM --- Check if file was downloaded successfully ---
+if exist "%client.py%" (
+    echo File downloaded successfully to %FILE%
+    
+    REM --- Run the downloaded file ---
+    start "" "%client.py%"
+) else (
+    echo Failed to download file.
+)
+
+pause
